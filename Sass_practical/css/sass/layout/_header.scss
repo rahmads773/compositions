@@ -1,0 +1,103 @@
+header {
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+    @media (max-width:767px) {
+       padding: 5px 0;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        @media (max-width:992px) {
+            flex-direction: column;
+            text-align: center;
+        }
+        @media (max-width:767px) {
+            flex-direction: row;
+            text-align: left;
+            justify-content: space-between;
+        }
+        .logo{
+        width: 30%;
+            h1{
+            margin-bottom: 10px;
+            @media (max-width:767px) {
+                font-size: 25px;
+            }
+            }
+           
+            p{
+                color: $greyColor;
+                @media (max-width:767px) {
+                    font-size: 16px;
+                }
+            }
+                }
+                .navbar{
+                    margin: auto;
+                    background-color: #e2494c;
+                    border-radius: 7px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 25px;
+                    padding: 10px;
+                    @media (max-width:767px) {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        height: 100vh;
+                        width: 100%;
+                        flex-direction: column;
+                        border-radius: 0;
+                        transform: translateX(100%);
+                        z-index: 100;
+                        transition: .5s;
+                    }
+            li{
+                     text-align: center;
+                     transition: .3s;
+                     &:hover{
+                        background-color: #871e1e;
+                        border-radius: 7px;
+                    }
+                    @media (max-width:767px) {
+                        margin-bottom: 10px;
+                    }
+            a{
+                color: white;
+                display: block;
+                padding:15px 10px;
+                @media (max-width:767px) {
+                    font-size: 25px;
+                }
+            }
+            }
+           
+                }
+                .navbar.active{
+                    transform:translateX(0);
+                }
+                .menu{
+                    display: none;
+                    z-index: 110;
+                    i{
+                        font-size: 30px;
+                        margin-right: 7px;
+                        cursor: pointer;
+                    }
+                    @media (max-width:767px) {
+                        display: block;
+                        position: absolute;
+                        top: 30px;
+                      right: 30px;
+                    }
+                }
+                .menu.active{
+                    i{
+                        color: white;
+                    }
+                }
+                
+    }
+    
+}

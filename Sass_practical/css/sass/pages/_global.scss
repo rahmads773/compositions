@@ -1,0 +1,16 @@
+body{
+background-color: #f6f6f6;
+font-family: 'Poppins', sans-serif;
+::selection{
+    background-color: $mainColor;
+    color: white;
+}
+ul ,ol{
+    list-style: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+}
+
